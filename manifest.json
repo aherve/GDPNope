@@ -26,9 +26,7 @@
     "default_popup": "src/popup.html",
     "default_title": "GDPNope"
   },
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": [ ],
   "web_accessible_resources": [
     "assets/*",
     "src/nope.js"
