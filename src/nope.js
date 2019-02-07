@@ -1,4 +1,7 @@
+let didomiClosed = false
+
 function thanksButNo (mutations) {
+  // quantcast
   const qcReady = mutations.some(mutation => {
     return mutation.target.firstChild &&
       mutation.target.firstChild.classList &&
@@ -6,6 +9,12 @@ function thanksButNo (mutations) {
   })
   if (qcReady) {
     window.__cmpui("setAndSaveAllConsent", false);
+  }
+
+  // Didomi
+  if (!!window.Didomi && !didomiClosed) {
+    window.Didomi.setUserDisagreeToAll()
+    didomiClosed = true
   }
 }
 
