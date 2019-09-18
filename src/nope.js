@@ -16,6 +16,11 @@ function thanksButNo (mutations) {
     window.Didomi.setUserDisagreeToAll()
     didomiClosed = true
   }
+
+  // consentmanager
+  if (!!window.cmpmngr) {
+    window.cmpmngr.setConsentViaBtn(0)
+  }
 }
 
 const observer = new MutationObserver(thanksButNo)
